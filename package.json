@@ -1,0 +1,14 @@
+{
+  "name": "ebay-trends",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "judog24 <judog24@gmail.com>",
+  "license": "MIT",
+  "private": true,
+  "dependencies": {
+    "@types/cheerio": "^0.22.28",
+    "cheerio": "^1.0.0-rc.6",
+    "playwright": "^1.10.0",
+    "typescript": "^4.2.4"
+  }
+}

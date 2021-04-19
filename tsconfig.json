@@ -1,0 +1,17 @@
+{
+  "compilerOptions": {
+    "target": "ES6",
+    "module": "CommonJS",
+    "strict": true,
+    "sourceMap": true,
+    "outDir": "./dist",
+    "rootDir": "./src",
+    "removeComments": true,
+    "esModuleInterop": true,
+    "moduleResolution": "Node",
+    "typeRoots": [
+      "node_modules/@types"
+    ],
+    "alwaysStrict": true
+  }
+}
