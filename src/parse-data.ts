@@ -19,7 +19,7 @@ async function cleanData(listings: rawListing[]): Promise<Listing[]> {
   let parsedListings: Listing[] = [];
 
   for (const listing of listings) {
-    //console.log(listing);
+    console.log(listing);
     console.log('getting date atttribute');
     const dateAttirubte = await getListingAttribute(listing.date);
     console.log('getting tempdate');

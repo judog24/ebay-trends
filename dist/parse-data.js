@@ -32,6 +32,7 @@ function cleanData(listings) {
     return __awaiter(this, void 0, void 0, function* () {
         let parsedListings = [];
         for (const listing of listings) {
+            console.log(listing);
             console.log('getting date atttribute');
             const dateAttirubte = yield getListingAttribute(listing.date);
             console.log('getting tempdate');
