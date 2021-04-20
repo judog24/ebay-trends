@@ -25,3 +25,7 @@
     <ul class="srp-results srp-list clearfix"></ul>
 
     <li class="s-item">
+
+
+Unexpected character
+ D:\git\ebay-trends\node_modules\playwright\lib\web\recorder\app_icon.png

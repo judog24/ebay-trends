@@ -1,2 +1,2 @@
 @ECHO OFF
-node dist/index.js
+node dist/main.js

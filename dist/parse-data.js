@@ -92,7 +92,9 @@ function getListingAttribute(listingDates) {
         let attr = '';
         listingDates.each((i, elem) => {
             if ($(elem).children().attr('role')) {
-                if ($(elem).text().indexOf(' ') !== -1) {
+                console.log('element has Role attribute');
+                if ($(elem).children().children().text().indexOf(' ') !== -1) {
+                    console.log('empty element detected');
                     attr = $(elem).children().children().attr('class');
                 }
             }
@@ -106,19 +108,22 @@ function getListingDate(listingDates, dateAttirubte) {
     return new Promise((resolve) => {
         const $ = require('cheerio');
         let currentDate = '';
+        let cleanDate = '';
         console.log('DATE ATTRIBUTE: ', dateAttirubte);
         listingDates.each((i, elem) => {
-            if (dateAttirubte == '') {
-                currentDate += $(elem).children().html();
+            if (dateAttirubte.length < 1) {
+                console.log('ATTRIBUTE DOES NOT MATCH');
+                cleanDate += $(elem).children().html();
+                resolve(cleanDate);
             }
-            if ($(elem).attr('class') == dateAttirubte) {
-                currentDate += $(elem).children().text();
+            else if ($(elem).children().children().attr('class') === dateAttirubte) {
+                console.log('attribute matched');
+                console.log('MATCHING: ', $(elem).children().children().attr('class'));
+                console.log('GENERATING DATE');
+                currentDate += $(elem).children().children().text();
+                resolve(currentDate);
             }
         });
-        console.log('PRINT CURRENT DATE');
-        console.log(currentDate);
-        console.log('finished getListingDate');
-        resolve(currentDate);
     });
 }
 //# sourceMappingURL=parse-data.js.map

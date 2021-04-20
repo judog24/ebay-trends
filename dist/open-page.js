@@ -13,7 +13,9 @@ exports.openPage = void 0;
 const playwright_1 = require("playwright");
 function openPage(url) {
     return __awaiter(this, void 0, void 0, function* () {
-        const browser = yield playwright_1.chromium.launch({ headless: false });
+        const browser = yield playwright_1.chromium.launch({
+            headless: false,
+        });
         const page = yield browser.newPage();
         yield page.goto(url);
         yield page.$('ul.srp-results');

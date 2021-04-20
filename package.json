@@ -1,14 +1,29 @@
 {
   "name": "ebay-trends",
   "version": "1.0.0",
-  "main": "index.js",
+  "main": "main.js",
   "author": "judog24 <judog24@gmail.com>",
   "license": "MIT",
   "private": true,
+  "bin": "dist/main.js",
+  "pkg": {
+    "scripts": "dist/**/*.js",
+    "assets": [
+      "node_modules/**/*",
+      "assets/ms-playwright/chromium-857950/chrome-win/*"
+    ],
+    "targets": [
+      "node14-win-x64"
+    ],
+    "outputPath": "build"
+  },
   "dependencies": {
     "@types/cheerio": "^0.22.28",
     "cheerio": "^1.0.0-rc.6",
-    "playwright": "^1.10.0",
+    "pkg": "^4.5.1",
     "typescript": "^4.2.4"
+  },
+  "devDependencies": {
+    "playwright": "^1.10.0"
   }
 }
